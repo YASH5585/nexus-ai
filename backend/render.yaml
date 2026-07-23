@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: nexus-ai-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o
+      - key: OPENAI_MAX_TOKENS
+        value: "4096"
+      - key: FRONTEND_URL
+        value: https://yash5585.github.io
+      - key: BACKEND_URL
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: https://yash5585.github.io,https://nexus-ai.vercel.app,https://*.vercel.app
+      - key: DEBUG
+        value: "false"
+      - key: LOG_LEVEL
+        value: INFO
+      - key: ENVIRONMENT
+        value: production
+      - key: MAX_RETRIES
+        value: "5"
+      - key: SANDBOX_TIMEOUT
+        value: "30"

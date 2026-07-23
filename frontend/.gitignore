@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Production build output
+.next/
+out/
+.vercel/
+
+# Environment files
+.env.local
+.env.production.local
+.env.test.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Deployment artifacts
+gh-pages-temp/
+deploy-github-pages.ps1
+proxy-server.js
+start-tunnel.js
